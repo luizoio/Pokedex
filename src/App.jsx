@@ -38,7 +38,7 @@ function App() {
 
   return (
     <>
-      <h1>Pokédex do Pikachu</h1>
+      <h1>Pokédex do Zóio</h1>
       <div className="card">
         <button onClick={fetchPokemon}>Trazer Pokémon!</button>
       </div>
