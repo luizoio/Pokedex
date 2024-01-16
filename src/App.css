@@ -34,9 +34,39 @@
 }
 
 .card {
-  padding: 2em;
+  margin-bottom: 1rem;
+
+  button {
+    width: 100%;
+  }
+}
+
+.search {
+  display: flex;
+  justify-content: flex-start;
+
+  button {
+    width: auto;
+  }
+
+  input {
+    padding: 0;
+    flex-grow: 2;
+    margin-right: 5px;
+    border-radius: 8px;
+    background-color: #1a1a1a;
+    border: 1px solid gray;
+  }
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.pokemon-card {
+  background-color: cornflowerblue;
+  padding: 1rem;
+  p {
+    text-align: left;
+  }
 }
