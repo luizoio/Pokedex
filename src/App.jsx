@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import "./App.css";
+import FetchButton from "./components/FetchButton";
 
 function App() {
   const [pokemonList, setPokemonList] = useState([]);
@@ -38,18 +39,14 @@ function App() {
 
   return (
     <>
-      <h1>Pokédex do Zóio</h1>
-      <div className="card">
-        <button onClick={fetchPokemon}>Trazer Pokémon!</button>
-      </div>
-
+      <h1>Pokédex do Pikachu</h1>
+      <FetchButton prop={fetchPokemon} />
       {!isLoading && showSearch && (
         <div className="card search">
           <input onChange={handleFilter} type="text" />
           <button>Buscar!</button>
         </div>
       )}
-
       {isLoading && (
         <div className="pokemon-card">
           <h2>
@@ -57,7 +54,6 @@ function App() {
           </h2>
         </div>
       )}
-
       {!isLoading && filteredList.length > 1 && (
         <div className="pokemon-card">
           {filteredList.map((item) => {
@@ -70,4 +66,3 @@ function App() {
 }
 
 export default App;
-
