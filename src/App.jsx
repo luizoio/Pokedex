@@ -15,7 +15,9 @@ function App() {
     }
   }, [pokemonList]);
 
-  const handleFilter = ({ target: { value } }) => {
+  const handleSearch = (event) => {
+    const { value } = event.target;
+
     const query = value;
     let updatedList = filteredList;
     updatedList = updatedList.filter((item) => {
@@ -43,7 +45,7 @@ function App() {
       <FetchButton prop={fetchPokemon} />
       {!isLoading && showSearch && (
         <div className="card search">
-          <input onChange={handleFilter} type="text" />
+          <input onChange={handleSearch} type="text" />
           <button>Buscar!</button>
         </div>
       )}
